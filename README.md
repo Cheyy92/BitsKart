@@ -1,67 +1,16 @@
-# BitsKart
-Course Project for CS F13. 
+# React + Vite
 
-(Tentative project structure, can and will change as time passes and we keep failing)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-```text
-BitsKart/
-├── .github/
-│   └── workflows/
-│       └── node.js.yml
-├── backend/
-│   ├── config/
-│   │   └── db.js
-|   ├── core/
-|   │   ├── BaseController.js  # Common controller utilities
-|   │   ├── BaseService.js     # Common service utilities
-|   │   └── ApiError.js        # Custom error handling class
-│   ├── controllers/           #Classes that handle requests/responses
-│   │   ├── AuthController.js
-│   │   ├── CustomerController.js
-│   │   └── RetailerController.js
-│   ├── middleware/
-│   │   └── AuthMiddleware.js
-│   ├── models/                 # Define Database Schemas (Objects in DB)
-│   │   ├── User.js             # User Class via Mongoose
-│   │   ├── Product.js
-│   │   └── Order.js
-|   ├── repositories/           #Classes that handle DB operations for a model
-|   │   ├── UserRepository.js
-|   │   ├── ProductRepository.js
-|   │   └── OrderRepository.js
-|   ├── services/               #Classes that contain business logic
-|   │   ├── AuthService.js
-|   │   ├── CustomerService.js
-|   │   └── RetailerService.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── customerRoutes.js
-│   │   └── retailerRoutes.js
-│   ├── .env.example
-│   ├── package.json
-│   └── server.js
-│
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── api/
-│   │   │   ├── customerService.js
-│   │   │   └── retailerService.js
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   │   └── AuthContext.js
-│   │   ├── pages/
-│   │   │   ├── LoginPage.js
-│   │   │   ├── Customer/
-│   │   │   │   └── HomePage.js
-│   │   │   └── Retailer/
-│   │   │       └── Dashboard.js
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-│
-├── .gitignore
-├── LICENSE
-└── README.md
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
